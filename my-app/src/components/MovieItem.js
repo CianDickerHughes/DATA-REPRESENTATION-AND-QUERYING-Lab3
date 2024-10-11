@@ -1,14 +1,25 @@
-const MovieItem = (props) => {
-    return (
-        <div>
-            <h3>{props.mymovie.Title}</h3>
-            <img src = {props.mymovie.Poster}/>
-            <h4>{props.mymovie.Year}</h4>
-            <h5>{props.mymovie.Type}</h5>
-            <h5>{props.mymovie.imdbID}</h5>
-            <br/>
-        </div>
-    );
-  }
+import { useEffect } from "react";
+import Card from 'react-bootstrap/Card';
 
-  export default MovieItem;
+function MovieItem(props) {
+  useEffect(() => { 
+    console.log("Movie Item:", props.mymovie);
+  }, [props.mymovie]); // Only run this effect when the mymovie prop changes
+
+  // return MovieItem component and Display JSON movies
+  return (
+    <div>
+      <Card>
+        <Card.Header>{props.mymovie.Title}</Card.Header>
+        <Card.Body>
+          <blockquote className="blockquote mb-0">
+            <img src={props.mymovie.Poster} alt={props.mymovie.Title} />
+            <footer>{props.mymovie.Year}</footer>
+          </blockquote>
+        </Card.Body>
+      </Card>
+    </div>
+  );
+}
+
+export default MovieItem;

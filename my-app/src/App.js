@@ -12,11 +12,11 @@ import Movies from './components/Movies';
 function App() {
   return (
     <Router>
-      <NavigationBar />
+      <NavigationBar /* navbar with routing *//>
       <Routes>
-        <Route path="/" element={<Content />} />
-        <Route path="/read" element={<Read />} />
-        <Route path="/create" element={<Create />} />
+        <Route path="/" element={<Content /> /* The Content page */} />
+        <Route path="/read" element={<Read />/* The Read page */} />
+        <Route path="/create" element={<Create />/* The Create page */} />
       </Routes>
     </Router>
   );
