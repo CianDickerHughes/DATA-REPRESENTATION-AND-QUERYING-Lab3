@@ -3,6 +3,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
 // Navigation Bar in dark theme
+// Links to the home, create and read pages
 const NavigationBar = () => {
   return (
         <Navbar bg="dark" data-bs-theme="dark">

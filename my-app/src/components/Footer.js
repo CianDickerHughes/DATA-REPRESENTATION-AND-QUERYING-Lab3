@@ -1,4 +1,4 @@
-// The Footer
+// Return the Footer
 const Footer = () => {
     return <h3>My Footer in another component</h3>;
   };

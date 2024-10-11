@@ -6,7 +6,7 @@ function MovieItem(props) {
     console.log("Movie Item:", props.mymovie);
   }, [props.mymovie]); // Only run this effect when the mymovie prop changes
 
-  // return MovieItem component and Display JSON movies
+  // return MovieItem component and Display JSON movies with cards
   return (
     <div>
       <Card>
